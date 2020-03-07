@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
     <script src="client.js"></script>
 </head>
 <body>
@@ -16,25 +18,42 @@
         <section>
             <h3>Add Employee</h3>
             <form>
-                <input type="text" id=firstName placeholder="First Name"/>
-                <input type="text" id=lastName placeholder="Last Name"/>
-                <input type="text" id=id placeholder="ID"/>
-                <input type="text" id=title placeholder="Title"/>
-                <input type="text" id=annualSalary placeholder="Annual Salary"/>
-                <button type="submit" id="submitButton">Submit</button>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id=firstName placeholder="First Name"/>
+                    </div>
+                    <div class="col">
+                        <input type="text" id=lastName placeholder="Last Name"/>
+                    </div>
+                    <div class="col">
+                        <input type="number" id=id placeholder="ID"/>
+                    </div>
+                    <div class="col">
+                        <input type="text" id=title placeholder="Title"/>
+                    </div>
+                    <div class="col">
+                        <input type="number" id=annualSalary placeholder="Annual Salary"/>
+                    </div>
+                    <div class="col">
+                        <button type="submit" id="submitButton">Submit</button>
+                    </div>
+                </div>
             </form>
         </section>
         <section>
             <h3>Employees</h3>
-            <table id="employeeList">
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Annual Salary</th>
-                    <th></th>
-                </tr>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="employeeList"></tbody>
             </table>
             <h5>Total Monthly: $<span id=total></span></h5>
         </section>
