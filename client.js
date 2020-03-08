@@ -13,7 +13,7 @@ function submitEmployee(event){
     let el = $('#employeeList');
     el.append(`<tr><td>${$('#firstName').val()}</td>
     <td>${$('#lastName').val()}</td><td>${$('#id').val()}</td>
-    <td>${$('#title').val()}</td><td>${$('#annualSalary').val()}</td>
+    <td>${$('#title').val()}</td><td class='salary'>${$('#annualSalary').val()}</td>
     <td><button id="removeButton" class="btn btn-dark">Remove</button></td></tr>`);
     totalMonthly += Number($('#annualSalary').val())/12;
     $('#firstName').val('');
@@ -37,5 +37,8 @@ function displayTotalMonthly(){
 }
 
 function removeEmployee(){
+    let $item = $(this).closest('tr').find('.salary').text();
+    totalMonthly -= Number($item)/12;
     $(this).parent().parent().remove();
+    displayTotalMonthly();
 }
