@@ -15,7 +15,7 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 ## Screen Shot
 
-![Preview](Screen Shot 2020-03-09 at 1.27.06 PM.png)
+![Preview](jquery-salary-calculator/Screen Shot 2020-03-09 at 1.27.06 PM.png)
 
 ## Built With
 
