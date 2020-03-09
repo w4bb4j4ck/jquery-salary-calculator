@@ -9,39 +9,54 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
     <script src="client.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Raleway&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <h1>Salary Calculator</h1>
     </header>
     <main>
-        <section>
-            <h3>Add Employee</h3>
+        <h3>Add Employee</h3>
+        <section class="container">
             <form>
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" id=firstName placeholder="First Name"/>
+                        <input class="form-control" type="text" id=firstName placeholder="First Name"/>
                     </div>
                     <div class="col">
-                        <input type="text" id=lastName placeholder="Last Name"/>
+                        <input class="form-control" type="text" id=lastName placeholder="Last Name"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <input class="form-control" type="number" id=id placeholder="ID"/>
                     </div>
                     <div class="col">
-                        <input type="number" id=id placeholder="ID"/>
+                        <select class="custom-select" id=title placeholder="Title">
+                            <option selected disabled>Choose a title</option>
+                            <option>Sales Representative</option>
+                            <option>Accountant</option>
+                            <option>Office Administrator</option>
+                            <option>Project Manager</option>
+                            <option>Software Engineer</option>
+                            <option>CEO</option>
+                        </select>
                     </div>
                     <div class="col">
-                        <input type="text" id=title placeholder="Title"/>
+                        <input class="form-control" type="number" id=annualSalary placeholder="Annual Salary"/>
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="col">
-                        <input type="number" id=annualSalary placeholder="Annual Salary"/>
-                    </div>
-                    <div class="col">
-                        <button type="submit" id="submitButton">Submit</button>
+                        <button class="btn btn-dark" type="submit" id="submitButton">Submit</button>
                     </div>
                 </div>
             </form>
         </section>
-        <section>
-            <h3>Employees</h3>
+        <h3>Employees</h3>
+        <section class="container">
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
@@ -55,7 +70,7 @@
                 </thead>
                 <tbody id="employeeList"></tbody>
             </table>
-            <h5>Total Monthly: $<span id=total></span></h5>
+            <h5>Total Monthly: <span id=total></span></h5>
         </section>
     </main>
 </body>

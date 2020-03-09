@@ -14,7 +14,7 @@ function submitEmployee(event){
     el.append(`<tr><td>${$('#firstName').val()}</td>
     <td>${$('#lastName').val()}</td><td>${$('#id').val()}</td>
     <td>${$('#title').val()}</td><td class='salary'>${$('#annualSalary').val()}</td>
-    <td><button id="removeButton" class="btn btn-dark">Remove</button></td></tr>`);
+    <td><button id="removeButton" class="btn btn-outline-dark">Remove</button></td></tr>`);
     totalMonthly += Number($('#annualSalary').val())/12;
     $('#firstName').val('');
     $('#lastName').val('');
@@ -27,7 +27,7 @@ function submitEmployee(event){
 function displayTotalMonthly(){
     let el = $('#total');
     el.empty();
-    el.append(totalMonthly);
+    el.append(formatter.format(totalMonthly));
     if(totalMonthly > 20000){
         $('#total').addClass('red');
     }
@@ -42,3 +42,9 @@ function removeEmployee(){
     $(this).parent().parent().remove();
     displayTotalMonthly();
 }
+
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
