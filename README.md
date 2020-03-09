@@ -19,8 +19,8 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 ## Built With
 
-Javascript
-jQuery
+Javascript/
+jQuery/
 Bootstrap
 
 ## License
@@ -30,4 +30,4 @@ Bootstrap
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
 
 ## Support
-If you have suggestions or issues, please email me at [blyblz5@gmail.com](mailto: blyblz5@gmail.com)
+If you have suggestions or issues, please email me at [blyblz5@gmail.com](blyblz5@gmail.com)
